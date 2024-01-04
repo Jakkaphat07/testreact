@@ -44,4 +44,5 @@ export const Lgnform = styled.section`
 `
 export const Loginbanner = styled.form`
     margin-left: 15px;
+    border-bottom-left-radius: 80px 80px;
 `

@@ -1,12 +1,13 @@
 import React from 'react'
-import { Lgnform, Logo, Greet, Wrapper, Loginbanner } from './Styled'
-import Tokiomarinelogo from "../../asset/Tokiomarinelogo.png";
-import Bannerback from "../../asset/bannerbg.jpg"
+import { Lgnform, Logo, Greet, Wrapper, Loginbanner, Lgnfooter, Loginwrap, SwandFg, Switch } from './Styled'
+import Toggleswitch from '../Toggleswitch/Toggleswitch';
+import Tokiomarinelogo from "../../asset/Tokiomarinelog.png";
+import Rightsidebg from "../../asset/rightsidebg.png"
 
 function Login() {
   return (
     <Wrapper>
-        <Login>
+        <Loginwrap>
             <Logo>
                 <img src={Tokiomarinelogo} />
             </Logo>
@@ -15,19 +16,32 @@ function Login() {
                 <p>Enter your email and password to sign in</p>
             </Greet>
             <Lgnform>
-                <form action="">
+                <div >
                     <p>Email</p>
-                    <input type="text" />
+                    <input type="text" placeholder='Your name or email'/>
                     <p>Password</p>
-                    <input type="password" /> <br />
-                    <a href='#'>Forget your password ?</a> <br />
-                    <button type='submit'>Login</button>
-                </form>
+                    <input type="password" placeholder='Your password'  /> 
+                    <SwandFg>
+                        <Switch>
+                            <Toggleswitch/>
+                        </Switch>
+                        <div>
+                            <label>Remember me</label>
+                        </div>
+                        <a href='#'>Forget your password?</a> 
+                    </SwandFg>
+                    <button >Login</button>
+                </div>
             </Lgnform>
-        </Login>
-        <Loginbanner style={{background:`url(${Bannerback})`}}>
+        </Loginwrap>
+
+        <Loginbanner style={{background:`url(${Rightsidebg})`}}>
             
         </Loginbanner>
+        
+        <Lgnfooter>
+            <p>2023, Fast Track</p>
+        </Lgnfooter>
 
     </Wrapper>
     

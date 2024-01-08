@@ -1,6 +1,7 @@
 import React from 'react'
-import { Lgnform, Logo, Greet, Wrapper, Loginbanner, Lgnfooter, Loginwrap, SwandFg, Switch } from './Styled'
+import { Lgnform, Logo, Greet, Wrapper, Loginbanner, Lgnfooter, Loginwrap, SwandFg, Switch, Fgcon } from './Styled'
 import Toggleswitch from '../Toggleswitch/Toggleswitch';
+import PasswordInput from '../PasswordInput/PasswordInput';
 import Tokiomarinelogo from "../../asset/Tokiomarinelog.png";
 import Rightsidebg from "../../asset/rightsidebg.png"
 
@@ -16,33 +17,32 @@ function Login() {
                 <p>Enter your email and password to sign in</p>
             </Greet>
             <Lgnform>
-                <div >
+                
                     <p>Email</p>
                     <input type="text" placeholder='Your name or email'/>
                     <p>Password</p>
-                    <input type="password" placeholder='Your password'  /> 
+                    <PasswordInput/> 
                     <SwandFg>
                         <Switch>
                             <Toggleswitch/>
                         </Switch>
-                        <div>
+                        <Fgcon>
                             <label>Remember me</label>
-                        </div>
-                        <a href='#'>Forget your password?</a> 
+                            <a href='#'>Forget your password?</a>
+                        </Fgcon> 
                     </SwandFg>
-                    <button >Login</button>
-                </div>
+                    <button type='submit'>Login</button>
+                
             </Lgnform>
+             
+            <Lgnfooter>
+                <p>2023, Fast Track</p>
+            </Lgnfooter>
+
         </Loginwrap>
 
-        <Loginbanner style={{background:`url(${Rightsidebg})`}}>
-            
-        </Loginbanner>
-        
-        <Lgnfooter>
-            <p>2023, Fast Track</p>
-        </Lgnfooter>
-
+        <Loginbanner style={{background:`url(${Rightsidebg})`}}/>
+       
     </Wrapper>
     
   )

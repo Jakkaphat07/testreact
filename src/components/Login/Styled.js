@@ -4,13 +4,23 @@ export const Wrapper = styled.section`
     display: grid;
     grid-template-areas: "leftside rightside"  ;
     justify-content: center;
-    width:1512px;
-    height:982px;
+    max-width:100%;
+    max-height:100%;
+    @media (max-width: 991px) {
+		width:auto;
+	}
+	@media (max-width: 480px) {
+		width: auto;
+	}
+    
+
 `
 
 export const Loginwrap = styled.section`
     grid-area:leftside;
-    margin-left:10rem;
+    margin-left:23%;
+    width:764px;    
+    height:603px;
    
 
 `
@@ -64,10 +74,10 @@ export const Lgnform = styled.section`
         
     }
     button{
-        border: 1px #c3c4c3 solid;
+        border: none;
         margin-top: 2rem;
         padding: 0px 8px;
-        width: 397px;
+        width: 439px;
         height: 45px;
         color: white;
         background-color:#5198D7;
@@ -75,40 +85,57 @@ export const Lgnform = styled.section`
     }
     
 `
-
-export const SwandFg = styled.label`
-    display: flex;
+export const SwandFg = styled.div`
+    display:flex;
+    align-items: center;
     margin-top: 1rem;
-    label{
-        color:#2D3748;
-        margin-left:-1px;
-    }
-    a{
-        margin-left: 2rem;
-        color:#5198D7;
-        text-decoration:none;
-
-    }
+    
 
 `
 
+export const Fgcon = styled.section`
+    margin-left: 10px;
+    label{
+        margin-right:0;
+        color:#2D3748;
+       
+    }
+    a{
+        margin-left: 108px;
+        color:#5198D7;
+        font-weight:700;
+        text-decoration:none;
+
+    }
+`
+
 export const Switch = styled.label`
-    width:10%
+    height:16px;
+   
 `
 
 export const Loginbanner = styled.form`
     grid-area: rightside;
-    margin-left: 12%;
+    margin-left: 0rem;
     border-bottom-left-radius: 20px 20px;
     width: 748px;
     height: 845px;
+    @media (max-width: 991px) {
+		width:auto;
+        height:auto;
+	}
+	@media (max-width: 480px) {
+		width:auto;
+        height:auto;
+	}
+  
 `
 
 export const Lgnfooter = styled.footer`
-   margin-top: 10%;
-   margin-left: 45%;
+   grid-area: leftside;
+   margin-top: 215px;
+   margin-left: 165px;
    margin-bottom: 5%;
-   width: 50%;
    align-items: center;
    justify-content:center;
 

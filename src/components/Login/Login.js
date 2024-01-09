@@ -2,7 +2,7 @@ import React from 'react'
 import { Lgnform, Logo, Greet, Wrapper, Loginbanner, Lgnfooter, Loginwrap, SwandFg, Switch, Fgcon } from './Styled'
 import Toggleswitch from '../Toggleswitch/Toggleswitch';
 import PasswordInput from '../PasswordInput/PasswordInput';
-import Tokiomarinelogo from "../../asset/Tokiomarinelog.png";
+import Tokiomarinelogo from "../../asset/tokio-horizon.svg";
 import Rightsidebg from "../../asset/rightsidebg.png"
 
 function Login() {
